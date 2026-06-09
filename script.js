@@ -11,9 +11,7 @@ const malaPismena = 'abcdefghijklmnopqrstuvwxyz';
 const cisla = '0123456789';
 const specialni = '!@#$%^&*()_+-=[]{}|;:,.<>?';
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-
+function generujHeslo() {
   let znaky = '';
 
   if (velkaCheckbox.checked) {
@@ -43,7 +41,14 @@ form.addEventListener('submit', function(e) {
   }
 
   vysledekInput.value = heslo;
+}
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  generujHeslo();
 });
+
+generujHeslo();
 
 const kopirovatBtn = document.getElementById('kopirovat');
 
