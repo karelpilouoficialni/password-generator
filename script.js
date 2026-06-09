@@ -29,6 +29,11 @@ form.addEventListener('submit', function(e) {
     znaky = znaky + specialni;
   }
 
+  if (znaky === '') {
+    alert('Vyber alespoň jednu skupinu znaků!');
+    return;
+  }
+
   let heslo = '';
   const delka = Number(delkaInput.value);
 
@@ -38,4 +43,11 @@ form.addEventListener('submit', function(e) {
   }
 
   vysledekInput.value = heslo;
+});
+
+const kopirovatBtn = document.getElementById('kopirovat');
+
+kopirovatBtn.addEventListener('click', function() {
+  vysledekInput.select();
+  document.execCommand('copy');
 });
