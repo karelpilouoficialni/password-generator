@@ -13,11 +13,6 @@ const znakyCisla = '0123456789';
 const znakySpecial = '!@#$%^&*()_+-=[]{}|;:,.<>?';
 
 function generujHeslo() {
-  console.log('velka:', velkaCheckbox.checked);
-  console.log('mala:', malaCheckbox.checked);
-  console.log('cisla:', cislaCheckbox.checked);
-  console.log('special:', specialniCheckbox.checked);
-
   let znaky = '';
 
   if (velkaCheckbox.checked) {
@@ -32,8 +27,6 @@ function generujHeslo() {
   if (specialniCheckbox.checked) {
     znaky = znaky + znakySpecial;
   }
-
-  console.log('pouzite znaky:', znaky);
 
   if (znaky === '') {
     alert('Vyber alespoň jednu skupinu znaků!');
