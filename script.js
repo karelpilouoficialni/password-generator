@@ -1,15 +1,16 @@
-const form = document.getElementById('generator-form');
+const generujBtn = document.getElementById('generuj-btn');
 const delkaInput = document.getElementById('delka');
 const velkaCheckbox = document.getElementById('velka');
 const malaCheckbox = document.getElementById('mala');
 const cislaCheckbox = document.getElementById('cisla');
 const specialniCheckbox = document.getElementById('specialni');
 const vysledekInput = document.getElementById('vysledek');
+const kopirovatBtn = document.getElementById('kopirovat');
 
 const velkaPismena = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const malaPismena = 'abcdefghijklmnopqrstuvwxyz';
 const cisla = '0123456789';
-const specialni = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+const specialniZnaky = '!@#$%^&*()_+-=[]{}|;:,.<>?';
 
 function generujHeslo() {
   let znaky = '';
@@ -24,7 +25,7 @@ function generujHeslo() {
     znaky = znaky + cisla;
   }
   if (specialniCheckbox.checked) {
-    znaky = znaky + specialni;
+    znaky = znaky + specialniZnaky;
   }
 
   if (znaky === '') {
@@ -43,14 +44,9 @@ function generujHeslo() {
   vysledekInput.value = heslo;
 }
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  generujHeslo();
-});
+generujBtn.addEventListener('click', generujHeslo);
 
 generujHeslo();
-
-const kopirovatBtn = document.getElementById('kopirovat');
 
 kopirovatBtn.addEventListener('click', function() {
   vysledekInput.select();
