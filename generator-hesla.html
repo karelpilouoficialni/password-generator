@@ -7,6 +7,43 @@
 </head>
 <body>
   <h1>Generátor hesel</h1>
+
+  <form id="generator-form">
+    <div>
+      <label for="delka">Délka hesla:</label>
+      <input type="number" id="delka" min="4" max="128" value="16">
+    </div>
+
+    <div>
+      <input type="checkbox" id="velka" checked>
+      <label for="velka">Velká písmena (A-Z)</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="mala" checked>
+      <label for="mala">Malá písmena (a-z)</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="cisla" checked>
+      <label for="cisla">Číslice (0-9)</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="specialni">
+      <label for="specialni">Speciální znaky (!@#$%^&amp;*)</label>
+    </div>
+
+    <div>
+      <button type="submit">Vygenerovat heslo</button>
+    </div>
+  </form>
+
+  <div>
+    <label for="vysledek">Vygenerované heslo:</label>
+    <input type="text" id="vysledek" readonly>
+    <button type="button" id="kopirovat">Kopírovat</button>
+  </div>
   
 </body>
 </html>
