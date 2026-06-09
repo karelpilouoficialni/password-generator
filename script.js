@@ -7,26 +7,33 @@ const specialniCheckbox = document.getElementById('specialni');
 const vysledekInput = document.getElementById('vysledek');
 const kopirovatBtn = document.getElementById('kopirovat');
 
-const velkaPismena = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const malaPismena = 'abcdefghijklmnopqrstuvwxyz';
-const cisla = '0123456789';
-const specialniZnaky = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+const znakyVelka = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const znakyMala = 'abcdefghijklmnopqrstuvwxyz';
+const znakyCisla = '0123456789';
+const znakySpecial = '!@#$%^&*()_+-=[]{}|;:,.<>?';
 
 function generujHeslo() {
+  console.log('velka:', velkaCheckbox.checked);
+  console.log('mala:', malaCheckbox.checked);
+  console.log('cisla:', cislaCheckbox.checked);
+  console.log('special:', specialniCheckbox.checked);
+
   let znaky = '';
 
   if (velkaCheckbox.checked) {
-    znaky = znaky + velkaPismena;
+    znaky = znaky + znakyVelka;
   }
   if (malaCheckbox.checked) {
-    znaky = znaky + malaPismena;
+    znaky = znaky + znakyMala;
   }
   if (cislaCheckbox.checked) {
-    znaky = znaky + cisla;
+    znaky = znaky + znakyCisla;
   }
   if (specialniCheckbox.checked) {
-    znaky = znaky + specialniZnaky;
+    znaky = znaky + znakySpecial;
   }
+
+  console.log('pouzite znaky:', znaky);
 
   if (znaky === '') {
     alert('Vyber alespoň jednu skupinu znaků!');
