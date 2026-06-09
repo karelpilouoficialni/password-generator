@@ -6,19 +6,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
   background-color: #171717;
-  color: #000;
-  line-height: 1.6;
-  position: relative;
+  font-family: Arial;
+  color: white;
+  padding: 40px;
 }
 
 /* https://codepen.io/osorina/pen/PQdMOO */
@@ -92,148 +86,57 @@ body {
 /* https://cssgradient.io/blog/css-gradient-text/ */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip */
 h1 {
-  font-size: 34px;
   text-align: center;
+  font-size: 32px;
   margin-bottom: 30px;
-  background: linear-gradient(135deg, #ff6b6b, #667eea, #ff6b6b, #667eea);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: gradientShift 4s ease-in-out infinite;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  25% { background-position: 100% 0%; }
-  50% { background-position: 100% 100%; }
-  75% { background-position: 0% 100%; }
-  100% { background-position: 0% 50%; }
 }
 
 #generator-form {
   background-color: white;
   padding: 30px;
-  border-radius: 10px;
   max-width: 500px;
   margin: 0 auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-#generator-form div {
-  margin-bottom: 15px;
+  color: black;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
-  color: #444;
-  font-size: 14px;
-  font-weight: 600;
 }
 
-input[type="number"] {
+input {
   padding: 8px;
-  width: 100px;
-  border: 2px solid #e0e0e0;
-  border-radius: 5px;
-  font-size: 14px;
-  font-family: inherit;
-}
-
-input[type="number"]:focus {
-  border-color: #667eea;
-  outline: none;
-}
-
-input[type="checkbox"] {
-  margin-top: 5px;
-  margin-right: 8px;
-  accent-color: #667eea;
+  margin-bottom: 15px;
 }
 
 button {
   background-color: #667eea;
   color: white;
   border: none;
-  padding: 12px 30px;
-  margin-top: 5px;
+  padding: 10px 25px;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 15px;
-  font-family: inherit;
-  font-weight: 600;
-  transition: transform 0.1s, box-shadow 0.1s;
-}
-
-button:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-}
-
-button:active {
-  transform: scale(0.98);
 }
 
 .obal-vysledek {
   background-color: white;
   padding: 30px;
-  border-radius: 10px;
   max-width: 500px;
   margin: 30px auto 0 auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: black;
 }
 
 #vysledek {
   padding: 10px;
   width: 100%;
   margin-top: 10px;
-  border: 2px solid #e0e0e0;
-  border-radius: 5px;
   font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-#vysledek:focus {
-  outline: none;
-  border-color: #764ba2;
 }
 
 .sila-hesla {
-  display: flex;
-  align-items: center;
   max-width: 500px;
   margin: 15px auto 0 auto;
-  gap: 10px;
   background-color: white;
   padding: 15px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: black;
+  text-align: center;
 }
-
-.sila-bar {
-  flex: 1;
-  height: 10px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.sila-bar-plneni {
-  height: 100%;
-  width: 60%;
-  border-radius: 5px;
-  background-color: #44cc44;
-  transition: width 0.3s, background-color 0.3s;
-}
-
-.sila-text {
-  font-size: 14px;
-  font-weight: 600;
-  min-width: 80px;
-  text-align: right;
-}
-
-
