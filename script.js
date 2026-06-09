@@ -63,28 +63,19 @@ function zobrazSilu(heslo) {
   if (heslo.length >= 16) skore = skore + 5;
 
   skore = Math.min(skore, 100);
-
-  const bar = document.getElementById('sila-bar-plneni');
+  
   const text = document.getElementById('sila-text');
 
   if (skore < 30) {
-    bar.style.width = skore + '%';
-    bar.style.backgroundColor = '#ff4444';
     text.textContent = 'Slabé';
     text.style.color = '#ff4444';
   } else if (skore < 55) {
-    bar.style.width = skore + '%';
-    bar.style.backgroundColor = '#ffaa00';
     text.textContent = 'Střední';
     text.style.color = '#ffaa00';
   } else if (skore < 80) {
-    bar.style.width = skore + '%';
-    bar.style.backgroundColor = '#44cc44';
     text.textContent = 'Silné';
     text.style.color = '#44cc44';
   } else {
-    bar.style.width = skore + '%';
-    bar.style.backgroundColor = '#667eea';
     text.textContent = 'Velmi silné';
     text.style.color = '#667eea';
   }
