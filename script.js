@@ -48,6 +48,12 @@ function generujHeslo() {
 
 generujBtn.addEventListener('click', generujHeslo);
 
+delkaInput.addEventListener('input', generujHeslo);
+velkaCheckbox.addEventListener('change', generujHeslo);
+malaCheckbox.addEventListener('change', generujHeslo);
+cislaCheckbox.addEventListener('change', generujHeslo);
+specialniCheckbox.addEventListener('change', generujHeslo);
+
 generujHeslo();
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand
