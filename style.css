@@ -103,7 +103,6 @@ h1 {
   max-width: 500px;
   margin: 0 auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border-top: 4px solid #667eea;
 }
 
 #generator-form div {
@@ -139,7 +138,7 @@ input[type="checkbox"] {
 }
 
 button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #667eea;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -168,7 +167,6 @@ button:active {
   max-width: 500px;
   margin: 30px auto 0 auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border-top: 4px solid #764ba2;
 }
 
 #vysledek {
@@ -187,13 +185,4 @@ button:active {
   border-color: #764ba2;
 }
 
-#kopirovat {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  padding: 10px 20px;
-  font-size: 14px;
-  margin-top: 10px;
-}
 
-#kopirovat:hover {
-  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
-}
