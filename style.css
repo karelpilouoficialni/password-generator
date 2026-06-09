@@ -19,7 +19,6 @@ body {
   color: #000;
   line-height: 1.6;
   position: relative;
-  overflow: hidden;
 }
 
 /* https://codepen.io/osorina/pen/PQdMOO */
@@ -200,6 +199,41 @@ button:active {
 #vysledek:focus {
   outline: none;
   border-color: #764ba2;
+}
+
+.sila-hesla {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  margin: 15px auto 0 auto;
+  gap: 10px;
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sila-bar {
+  flex: 1;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.sila-bar-plneni {
+  height: 100%;
+  width: 60%;
+  border-radius: 5px;
+  background-color: #44cc44;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.sila-text {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: right;
 }
 
 

@@ -44,6 +44,50 @@ function generujHeslo() {
   }
 
   vysledekInput.value = heslo;
+  zobrazSilu(heslo);
+}
+
+// https://stackoverflow.com/questions/33521541/password-strength-meter
+function zobrazSilu(heslo) {
+  let skore = 0;
+
+  skore = skore + Math.min(heslo.length * 4, 40);
+
+  if (/[a-z]/.test(heslo)) skore = skore + 10;
+  if (/[A-Z]/.test(heslo)) skore = skore + 10;
+  if (/[0-9]/.test(heslo)) skore = skore + 10;
+  if (/[^a-zA-Z0-9]/.test(heslo)) skore = skore + 15;
+
+  if (heslo.length >= 8) skore = skore + 5;
+  if (heslo.length >= 12) skore = skore + 5;
+  if (heslo.length >= 16) skore = skore + 5;
+
+  skore = Math.min(skore, 100);
+
+  const bar = document.getElementById('sila-bar-plneni');
+  const text = document.getElementById('sila-text');
+
+  if (skore < 30) {
+    bar.style.width = skore + '%';
+    bar.style.backgroundColor = '#ff4444';
+    text.textContent = 'Slabé';
+    text.style.color = '#ff4444';
+  } else if (skore < 55) {
+    bar.style.width = skore + '%';
+    bar.style.backgroundColor = '#ffaa00';
+    text.textContent = 'Střední';
+    text.style.color = '#ffaa00';
+  } else if (skore < 80) {
+    bar.style.width = skore + '%';
+    bar.style.backgroundColor = '#44cc44';
+    text.textContent = 'Silné';
+    text.style.color = '#44cc44';
+  } else {
+    bar.style.width = skore + '%';
+    bar.style.backgroundColor = '#667eea';
+    text.textContent = 'Velmi silné';
+    text.style.color = '#667eea';
+  }
 }
 
 generujBtn.addEventListener('click', generujHeslo);
