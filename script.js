@@ -1,3 +1,4 @@
+// DOM API - https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
 const generujBtn = document.getElementById('generuj-btn');
 const delkaInput = document.getElementById('delka');
 const velkaCheckbox = document.getElementById('velka');
@@ -36,6 +37,7 @@ function generujHeslo() {
   let heslo = '';
   const delka = Number(delkaInput.value);
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   for (let i = 0; i < delka; i++) {
     const nahodnyIndex = Math.floor(Math.random() * znaky.length);
     heslo = heslo + znaky[nahodnyIndex];
@@ -48,6 +50,7 @@ generujBtn.addEventListener('click', generujHeslo);
 
 generujHeslo();
 
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand
 kopirovatBtn.addEventListener('click', function() {
   vysledekInput.select();
   document.execCommand('copy');
