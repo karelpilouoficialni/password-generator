@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="number"] {
+  padding: 5px;
+  width: 80px;
+}
+
+input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#vysledek {
+  padding: 8px;
+  width: 300px;
+  margin-top: 10px;
+}
+
+#kopirovat {
+  background-color: #008CBA;
+}
