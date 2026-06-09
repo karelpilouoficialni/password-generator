@@ -7,43 +7,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Generátor hesel</h1>
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
 
-  <form id="generator-form">
-    <div>
-      <label for="delka">Délka hesla:</label>
-      <input type="number" id="delka" min="4" max="128" value="16">
+  <div class="obsah">
+    <h1>Generátor hesel</h1>
+
+    <form id="generator-form">
+      <div>
+        <label for="delka">Délka hesla:</label>
+        <input type="number" id="delka" min="4" max="128" value="16">
+      </div>
+
+      <div>
+        <label for="velka">Velká písmena (A-Z)</label>
+        <input type="checkbox" id="velka" checked>
+      </div>
+
+      <div>
+        <label for="mala">Malá písmena (a-z)</label>
+        <input type="checkbox" id="mala" checked>
+      </div>
+
+      <div>
+        <label for="cisla">Číslice (0-9)</label>
+        <input type="checkbox" id="cisla" checked>
+      </div>
+
+      <div>
+        <label for="specialni">Speciální znaky (!@#$%^&amp;*)</label>
+        <input type="checkbox" id="specialni">
+      </div>
+
+      <div>
+        <button type="button" id="generuj-btn">Vygenerovat heslo</button>
+      </div>
+    </form>
+
+    <div class="obal-vysledek">
+      <label for="vysledek">Vygenerované heslo:</label>
+      <input type="text" id="vysledek" readonly>
+      <button type="button" id="kopirovat">Kopírovat</button>
     </div>
-
-    <div>
-      <label for="velka">Velká písmena (A-Z)</label>
-      <input type="checkbox" id="velka" checked>
-    </div>
-
-    <div>
-      <label for="mala">Malá písmena (a-z)</label>
-      <input type="checkbox" id="mala" checked>
-    </div>
-
-    <div>
-      <label for="cisla">Číslice (0-9)</label>
-      <input type="checkbox" id="cisla" checked>
-    </div>
-
-    <div>
-      <label for="specialni">Speciální znaky (!@#$%^&amp;*)</label>
-      <input type="checkbox" id="specialni">
-    </div>
-
-    <div>
-      <button type="button" id="generuj-btn">Vygenerovat heslo</button>
-    </div>
-  </form>
-
-  <div>
-    <label for="vysledek">Vygenerované heslo:</label>
-    <input type="text" id="vysledek" readonly>
-    <button type="button" id="kopirovat">Kopírovat</button>
   </div>
 
   <script src="script.js"></script>
