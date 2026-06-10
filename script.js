@@ -47,7 +47,8 @@ function generujHeslo() {
   zobrazSilu(heslo);
 }
 
-// https://stackoverflow.com/questions/33521541/password-strength-meter
+// https://www.geeksforgeeks.org/jquery/password-strength-indicator-using-jquery/
+// https://www.geeksforgeeks.org/javascript/create-a-password-strength-checker-using-html-css-and-javascript/
 function zobrazSilu(heslo) {
   let skore = 0;
 
